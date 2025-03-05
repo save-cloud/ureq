@@ -11,11 +11,11 @@ use crate::Error;
 /// translates to DER.
 #[derive(Clone, Hash)]
 pub struct Certificate<'a> {
-    der: CertDer<'a>,
+    pub der: CertDer<'a>,
 }
 
 #[derive(Clone)]
-enum CertDer<'a> {
+pub enum CertDer<'a> {
     Borrowed(&'a [u8]),
     Owned(Vec<u8>),
     Rustls(rustls_pki_types::CertificateDer<'static>),

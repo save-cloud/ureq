@@ -528,6 +528,8 @@ use request::{WithBody, WithoutBody};
 pub use response::ResponseExt;
 pub use send_body::AsSendBody;
 
+pub use run::run as run_request;
+
 mod agent;
 mod body;
 pub mod config;
@@ -537,7 +539,7 @@ mod proxy;
 mod query;
 mod request;
 mod response;
-mod run;
+pub(crate) mod run;
 mod send_body;
 mod timings;
 mod util;

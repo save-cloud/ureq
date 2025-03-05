@@ -142,10 +142,7 @@ fn build_connector(tls_config: &TlsConfig) -> Result<CachedNativeTlsConnector, E
             RootCerts::WebPki => {
                 // Only use the specific roots.
                 builder.disable_built_in_roots(true);
-                let certs = webpki_root_certs::TLS_SERVER_ROOT_CERTS
-                    .iter()
-                    .map(|c| c.as_ref());
-                add_valid_der(certs, &mut builder);
+                add_valid_der(vec![], &mut builder);
             }
         }
     }

@@ -182,7 +182,7 @@ impl MiddlewareChain {
 
 /// Continuation of a [`Middleware`] chain.
 pub struct MiddlewareNext<'a> {
-    agent: &'a Agent,
+    pub agent: &'a Agent,
     index: usize,
 }
 

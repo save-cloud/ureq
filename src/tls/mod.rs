@@ -6,7 +6,7 @@ use std::hash::{Hash, Hasher};
 use std::sync::Arc;
 
 mod cert;
-pub use cert::{parse_pem, Certificate, PemItem, PrivateKey};
+pub use cert::{parse_pem, CertDer, Certificate, PemItem, PrivateKey};
 
 #[cfg(feature = "_rustls")]
 pub(crate) mod rustls;

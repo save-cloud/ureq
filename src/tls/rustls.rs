@@ -180,7 +180,7 @@ fn build_config(tls_config: &TlsConfig) -> CachedRustlConfig {
                 )),
             RootCerts::WebPki => {
                 let root_store = RootCertStore {
-                    roots: webpki_roots::TLS_SERVER_ROOTS.to_vec(),
+                    roots: vec![],
                 };
                 builder.with_root_certificates(root_store)
             }

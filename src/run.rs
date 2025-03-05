@@ -26,7 +26,7 @@ type Flow<T> = ureq_proto::client::flow::Flow<(), T>;
 /// Run a request.
 ///
 /// This is the "main loop" of entire ureq.
-pub(crate) fn run(
+pub fn run(
     agent: &Agent,
     mut request: Request<()>,
     mut body: SendBody,
